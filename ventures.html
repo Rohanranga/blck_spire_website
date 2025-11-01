@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventures | Blakspire Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Blakspire</a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ventures.html">Ventures</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="investment.html">Investment Studio</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Ventures</h1>
+            <p>Our portfolio spans across technology, mobility, design, wellness, and sustainability.<br>Each venture is independently driven yet connected through Blakspire’s innovation ecosystem.</p>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="featured-ventures-grid">
+                    <div class="venture-card-featured">
+                        <h3>Unifurb – Renew Tech, Renew Tomorrow</h3>
+                        <p>A platform redefining refurbished electronics through trust, testing, and transparency.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>ReviveEV – We Don’t Just Fix EVs, We Revive the Future</h3>
+                        <p>India’s fastest-growing EV repair and service chain ensuring smarter, cleaner mobility.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>Linksy – Your Network. Reimagined.</h3>
+                        <p>A professional community built for collaboration, mentorship, and authentic connection.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>HerTale – Where Home Chefs Become Icons</h3>
+                        <p>A platform empowering women and home chefs to turn passion into profession.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>TrueBlend – Care That’s Truly Yours</h3>
+                        <p>A personal care brand combining AI personalization with clean, conscious ingredients.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>Trident – Play Bold. Train Hard.</h3>
+                        <p>A sportswear brand built for athletes who chase excellence with discipline and style.</p>
+                    </div>
+                    <div class="venture-card-featured">
+                        <h3>BlueGenesis – Innovation from the Ocean Depths</h3>
+                        <p>A marine biotech venture pioneering sustainable bio-ink, algae farming, and biotech R&D.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Blakspire Pvt. Ltd. | “Built, Funded, and Powered by Blakspire.”</p>
+            <p>All Rights Reserved.</p>
+            <p>Chennai / Bangalore (India) | <a href="mailto:contact@blakspire.in">contact@blakspire.in</a></p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">X (Twitter)</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+            const navOverlay = document.querySelector('.nav-overlay');
+
+            menuIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+            });
+
+            navOverlay.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

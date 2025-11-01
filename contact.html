@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Blakspire Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Blakspire</a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ventures.html">Ventures</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="investment.html">Investment Studio</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <main>
+        <section class="page-header">
+            <h1>Let’s Build Something Extraordinary.</h1>
+        </section>
+
+        <section>
+            <div class="container">
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="organization" placeholder="Organization">
+                    <textarea name="message" placeholder="Message / Proposal" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+
+                <div class="contact-details">
+                    <p><strong>Registered Office:</strong><br>Blakspire Pvt. Ltd., Chennai / Bangalore (India)</p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@blakspire.in">contact@blakspire.in</a></p>
+                    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+                    <div class="social-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">X (Twitter)</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Blakspire Pvt. Ltd. | “Built, Funded, and Powered by Blakspire.”</p>
+            <p>All Rights Reserved.</p>
+            <p>Chennai / Bangalore (India) | <a href="mailto:contact@blakspire.in">contact@blakspire.in</a></p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">X (Twitter)</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+            const navOverlay = document.querySelector('.nav-overlay');
+
+            menuIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+            });
+
+            navOverlay.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

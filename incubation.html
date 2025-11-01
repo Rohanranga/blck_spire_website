@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incubation | Blakspire Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Blakspire</a>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ventures.html">Ventures</a></li>
+                <li><a href="incubation.html">Incubation</a></li>
+                <li><a href="investment.html">Investment Studio</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <main>
+        <section class="page-header">
+            <h1>Virtual Incubation Centre — Build Remotely, Grow Globally.</h1>
+        </section>
+
+        <section>
+            <div class="container">
+                <p>Blakspire’s Virtual Incubation Centre gives startups complete digital infrastructure to launch and scale. From business consulting to MVP development, we empower founders with everything they need — no physical office required.</p>
+                
+                <h2>What We Offer:</h2>
+                <div class="features-grid">
+                    <div class="feature-item"><h3>Business Strategy & Roadmap Design</h3></div>
+                    <div class="feature-item"><h3>UI/UX Design & Product Prototyping</h3></div>
+                    <div class="feature-item"><h3>Tech & App Development</h3></div>
+                    <div class="feature-item"><h3>Branding, Marketing & Growth Strategy</h3></div>
+                    <div class="feature-item"><h3>Legal & Financial Guidance</h3></div>
+                    <div class="feature-item"><h3>Investor Readiness & Pitch Deck Support</h3></div>
+                </div>
+
+                <a href="#" class="cta-button">Apply for Incubation →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Blakspire Pvt. Ltd. | “Built, Funded, and Powered by Blakspire.”</p>
+            <p>All Rights Reserved.</p>
+            <p>Chennai / Bangalore (India) | <a href="mailto:contact@blakspire.in">contact@blakspire.in</a></p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">X (Twitter)</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.querySelector('.nav-menu');
+            const navOverlay = document.querySelector('.nav-overlay');
+
+            menuIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+            });
+
+            navOverlay.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
