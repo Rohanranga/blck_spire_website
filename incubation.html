@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incubation | Blakspire Pvt. Ltd.</title>
+    <title>Incubation | Blakspirepvtltd Pvt. Ltd.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="top-nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Blakspire</a>
+            <a href="index.html" class="nav-logo">Blakspirepvtltd</a>
             <div class="menu-icon">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -28,23 +28,24 @@
     </nav>
     <div class="nav-overlay"></div>
 
-    <main>
-        <section class="page-header">
+    <header class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1517292987719-0369a794cd84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-attachment: fixed;">
+        <div class="hero-content">
             <h1>Virtual Incubation Centre — Build Remotely, Grow Globally.</h1>
-        </section>
+        </div>
+    </header>
 
         <section>
             <div class="container">
-                <p>Blakspire’s Virtual Incubation Centre gives startups complete digital infrastructure to launch and scale. From business consulting to MVP development, we empower founders with everything they need — no physical office required.</p>
+                <p>Blakspirepvtltd’s Virtual Incubation Centre gives startups complete digital infrastructure to launch and scale. From business consulting to MVP development, we empower founders with everything they need — no physical office required.</p>
                 
                 <h2>What We Offer:</h2>
                 <div class="features-grid">
-                    <div class="feature-item"><h3>Business Strategy & Roadmap Design</h3></div>
-                    <div class="feature-item"><h3>UI/UX Design & Product Prototyping</h3></div>
-                    <div class="feature-item"><h3>Tech & App Development</h3></div>
-                    <div class="feature-item"><h3>Branding, Marketing & Growth Strategy</h3></div>
-                    <div class="feature-item"><h3>Legal & Financial Guidance</h3></div>
-                    <div class="feature-item"><h3>Investor Readiness & Pitch Deck Support</h3></div>
+                    <div class="feature-item neon-box"><h3>Business Strategy & Roadmap Design</h3></div>
+                    <div class="feature-item neon-box"><h3>UI/UX Design & Product Prototyping</h3></div>
+                    <div class="feature-item neon-box"><h3>Tech & App Development</h3></div>
+                    <div class="feature-item neon-box"><h3>Branding, Marketing & Growth Strategy</h3></div>
+                    <div class="feature-item neon-box"><h3>Legal & Financial Guidance</h3></div>
+                    <div class="feature-item neon-box"><h3>Investor Readiness & Pitch Deck Support</h3></div>
                 </div>
 
                 <a href="#" class="cta-button">Apply for Incubation →</a>
@@ -52,9 +53,9 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <p>© 2025 Blakspire Pvt. Ltd. | “Built, Funded, and Powered by Blakspire.”</p>
+            <p>© 2025 Blakspirepvtltd Pvt. Ltd. | “Built, Funded, and Powered by Blakspirepvtltd.”</p>
             <p>All Rights Reserved.</p>
             <p>Chennai / Bangalore (India) | <a href="mailto:contact@blakspire.in">contact@blakspire.in</a></p>
             <div class="social-links">
@@ -65,30 +66,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuIcon = document.querySelector('.menu-icon');
-            const navMenu = document.querySelector('.nav-menu');
-            const navOverlay = document.querySelector('.nav-overlay');
 
-            menuIcon.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-                navOverlay.classList.toggle('active');
-            });
-
-            navOverlay.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <div class="nav-overlay"></div>
+    <script src="script.js"></script>
 </body>
 </html>
